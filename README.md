@@ -16,7 +16,8 @@ Want to test it?
 
 * How to build and deploy a full-stack application using React, Node, and PSQL.
 * How to read API documentation and follow instructions to integrate an AI pre-built model.
-* How to use bcrypt and environment variables to hide sensitive information (e.g. passwords). 
+* How to use bcrypt and environment variables to hide sensitive information (e.g. passwords).
+* How to use npm packages for styling (e.g. tachyons, particles). 
 
 ### Room for Improvement
 
