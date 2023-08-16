@@ -10,10 +10,14 @@ Want to test it?
 
 1. Register (it doesn't have to be real information).
 2. Sign-in using the same user and password.
-3. Copy a link to an image (the link must end as image extension, e.g. .jpg) 
+3. Paste a link to an image of a face (the link must end as image extension, e.g. .jpg) and click on Detect Face.
 
 ### Lessons Learned
 
 * How to build and deploy a full-stack application using React, Node, and PSQL.
 * How to read API documentation and follow instructions to integrate an AI pre-built model.
 * How to use bcrypt and environment variables to hide sensitive information (e.g. passwords). 
+
+### Room for Improvement
+
+At the moment, if the user uploads an image of a group, the app is only able to recognize one face. This needs to be changed, so it can recognize all the faces in the photo. 
