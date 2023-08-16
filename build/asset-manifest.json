@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/faceRecognition-front/static/css/main.9f142f80.css",
-    "main.js": "/faceRecognition-front/static/js/main.590555b7.js",
+    "main.js": "/faceRecognition-front/static/js/main.ba4bb1a2.js",
     "index.html": "/faceRecognition-front/index.html",
     "main.9f142f80.css.map": "/faceRecognition-front/static/css/main.9f142f80.css.map",
-    "main.590555b7.js.map": "/faceRecognition-front/static/js/main.590555b7.js.map"
+    "main.ba4bb1a2.js.map": "/faceRecognition-front/static/js/main.ba4bb1a2.js.map"
   },
   "entrypoints": [
     "static/css/main.9f142f80.css",
-    "static/js/main.590555b7.js"
+    "static/js/main.ba4bb1a2.js"
   ]
 }

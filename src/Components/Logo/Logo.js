@@ -5,7 +5,7 @@ import face from './face.png';
 const Logo = ()=> {
 	return (
 			<Tilt 
-				style={{ height: 150, width: 150, backgroundColor: 'darkgreen' }}
+				style={{ height: 150, width: 150, backgroundColor: 'black' }}
 				className='ma4 mt0 br2 shadow-2 pa2'
 			>
 				<div>
