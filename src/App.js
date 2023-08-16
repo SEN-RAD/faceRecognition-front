@@ -68,11 +68,10 @@ class App extends Component {
   }
 
   onInputChange = (event) => {
-    this.setState({ input: event.target.value }); {/*here event.target.value is so that we see the actual info put in the input. This thing here is the functionality of the Input component*/ }
+    this.setState({ input: event.target.value }); 
   };
 
   onButtonSubmit = () => {
-    {/*This is the functionality of the DETECT button. They are both passed as props to InputForm*/ }
     this.setState({ imageUrl: this.state.input })
     const raw = JSON.stringify({
       "user_app_id": {
@@ -103,7 +102,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((response) => {
         if (response) {
-          fetch('https://facerecognitionapi-production.up.railway.app/image', {
+          fetch('https://facerecognitionapi-djzk.onrender.com/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
