@@ -70,7 +70,15 @@ class SignIn extends Component {
 								className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" />
 						</div>
 						<div className="lh-copy mt3">
-							<p onClick={() => this.props.onRouteChange('register')} className="f5 link dim black db pointer">Register</p>
+							<p className="dib">
+								I'm new here. I'd like to{' '}
+								<span
+									onClick={() => this.props.onRouteChange('register')}
+									className="f5 link dim black dib pointer b"
+								>
+									register
+								</span>
+							</p>
 						</div>
 					</div>
 				</main>
