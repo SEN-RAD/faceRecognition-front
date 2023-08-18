@@ -10,6 +10,12 @@ class InputForm extends Component {
 		}
 	}
 
+	handleKeyPress = (event) => {
+		if (event.key === 'Enter') {
+		  this.props.onButtonSubmit();
+		}
+	  };
+
 	render() {
 		const { onInputChange, onButtonSubmit } = this.props;
 		const { visible } = this.state;
@@ -49,6 +55,7 @@ class InputForm extends Component {
 							className='f4 pa2 w-70 center'
 							type='text'
 							onChange={onInputChange}
+							onKeyDown={this.handleKeyPress}
 						/>
 						<button
 							className='w-30 grow f4 link ph3 pv2 dib white bg-light-purple'

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 
 
 class SignIn extends Component {
@@ -6,7 +7,8 @@ class SignIn extends Component {
 		super(props);
 		this.state = {
 			signInEmail: '',
-			signInPassword: ''
+			signInPassword: '',
+			isLoading: false
 		}
 	}
 
@@ -19,6 +21,8 @@ class SignIn extends Component {
 	}
 
 	onSubmitSignIn = () => {
+		this.setState({ isLoading: true });
+
 		fetch('https://facerecognitionapi-djzk.onrender.com/signin', {
 			method: 'post',
 			headers: { 'Content-Type': 'application/json' },
@@ -34,55 +38,75 @@ class SignIn extends Component {
 					this.props.onRouteChange('home');
 				}
 			})
+			.finally(() => {
+				this.setState({ isLoading: false });
+			});
 	}
+
+	handleKeyPress = (event) => {
+		if (event.key === 'Enter') {
+			this.onSubmitSignIn();
+		}
+	};
 
 	render() {
 		return (
-			<article className="br3 ba dark-blue b--black-10 mv4 w-100 w-50-m w-25-l mw6 center shadow-5">
-				<main className="pa4 black-80">
-					<div className="measure">
-						<fieldset id="sign_up" className="ba b--transparent ph0 mh0">
-							<legend className="f1 fw6 ph0 mh0">Sign In</legend>
-							<div className="mt3">
-								<label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+			<div>
+				<article className="br3 ba dark-blue b--black-10 mv4 w-100 w-50-m w-25-l mw6 center shadow-5">
+					<main className="pa4 black-80">
+						<div className="measure">
+							<fieldset id="sign_up" className="ba b--transparent ph0 mh0">
+								<legend className="f1 fw6 ph0 mh0">Sign In</legend>
+								<div className="mt3">
+									<label className="db fw6 lh-copy f6" htmlFor="email-address">Email</label>
+									<input
+										className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+										type="email"
+										name="email-address"
+										id="email-address"
+										onChange={this.onEmailChange}
+									/>
+								</div>
+								<div className="mv3">
+									<label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
+									<input
+										className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
+										type="password"
+										name="password"
+										id="password"
+										onChange={this.onPasswordChange}
+										onKeyDown={this.handleKeyPress}
+									/>
+								</div>
+							</fieldset>
+							<div className="">
 								<input
-									className="pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-									type="email"
-									name="email-address"
-									id="email-address"
-									onChange={this.onEmailChange}
-								/>
+									onClick={this.onSubmitSignIn}
+									className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" />
 							</div>
-							<div className="mv3">
-								<label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
-								<input
-									className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"
-									type="password"
-									name="password"
-									id="password"
-									onChange={this.onPasswordChange}
-								/>
+							<div className="lh-copy mt3">
+								<p className="dib">
+									I'm new here. I'd like to{' '}
+									<span
+										onClick={() => this.props.onRouteChange('register')}
+										className="f5 link dim black dib pointer b"
+									>
+										register
+									</span>
+								</p>
 							</div>
-						</fieldset>
-						<div className="">
-							<input
-								onClick={this.onSubmitSignIn}
-								className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" type="submit" value="Sign in" />
 						</div>
-						<div className="lh-copy mt3">
-							<p className="dib">
-								I'm new here. I'd like to{' '}
-								<span
-									onClick={() => this.props.onRouteChange('register')}
-									className="f5 link dim black dib pointer b"
-								>
-									register
-								</span>
-							</p>
+					</main>
+				</article>
+				<div>
+					{this.state.isLoading ? (
+						<div>
+							<CircularProgress />
+							<p className='white'>Just a moment, we're checking your credentials...</p>
 						</div>
-					</div>
-				</main>
-			</article>
+					) : null}
+				</div>
+			</div>
 		);
 	}
 }
