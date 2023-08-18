@@ -4,7 +4,7 @@ This app was built as the final project during the course Complete Web Developer
 
 ### Idea and Functionality
 
-The app uses face recognition AI  (www.clarifai.com/use-cases/facial-recognition). Users register and sign-in to use the app, copy-paste a link to an image, and the app detects the faces in the picture and keeps count of how many pictures the user has uploaded. 
+The app uses face detection AI  (www.clarifai.com/use-cases/facial-recognition). Users register and sign-in to use the app, copy-paste a link to an image, and the app detects the faces in the picture and keeps count of how many pictures the user has uploaded. 
 
 ### Lessons Learned
 
