@@ -1,6 +1,6 @@
 # faceRecognition-front
 
-This app was built as the final project during the course Complete Web Developer by Andrei Neagoie.  
+This app was built as the final project during the course Complete Web Developer by Andrei Neagoie. Backend here https://github.com/SEN-RAD/faceRecognitionApi
 
 ---
 ## Idea and Functionality 🚀
