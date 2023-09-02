@@ -15,7 +15,8 @@ Copy-paste a link to an image, and the app detects the faces in the picture and 
 ## Lessons Learned 📋
 
 * How to build and deploy a full-stack application using React, Node, and PSQL.
-* How to read API documentation and follow instructions to integrate an AI pre-built model.
+* How to work with Class components and Lifecycle Methods in React. 
+* How to read API documentation and follow instructions to do fetch requests and integrate an AI pre-built model.
 * How to use bcrypt and environment variables to hide sensitive information (e.g. passwords).
 * How to use npm packages for styling. 
 
