@@ -9,6 +9,8 @@ Copy-paste a link to an image, and the app detects the faces in the picture and 
 
 ⚡️ AI face detection.
 
+⚡️ User uploads counter.
+
 ⚡️ Registration and sign-in functions.
 
 ---
