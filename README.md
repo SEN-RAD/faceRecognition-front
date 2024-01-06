@@ -1,5 +1,4 @@
 # faceRecognition-front
-* THE LIVE VERSION IS TEMPORARILY INACTIVE *
 This app was built as the final project during the course Complete Web Developer by Andrei Neagoie. Backend here https://github.com/SEN-RAD/faceRecognitionApi
 
 ---
